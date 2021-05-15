@@ -27,11 +27,6 @@ namespace Scanner
             var status = ping.Send(ipAddr, timeout).Status;
             return status;
         }
-
-        private static void CheckPortUdp(IPAddress ipAddr, int port, int timeout = 3000)
-        {
-            throw new NotImplementedException();
-        }
         private static void CheckPortTcp(IPAddress ipAddr, int port, int timeout = 3000)
         {
             using var tcpClient = new TcpClient();
